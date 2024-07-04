@@ -55,19 +55,104 @@
               box-sizing: border-box;
               text-align: center;
             }
+
+            .install-btn:hover {
+              background-color: rgb(0, 108, 230)
+            }
+
+            #CLI-2 {
+              font-family: Arial, Helvetica, sans-serif;
+              background-color: #f8f8f8;
+              color: rgb(66, 66, 66);
+              padding: 10px;
+              border: none;
+              border-radius: 21px;
+              width: 361px;
+              height: 306px;
+              box-sizing: border-box;
+              margin-top: 3rem;
+              margin-left: 3rem;
+              margin-right: 2rem;
+              text-align: center;
+            }
+
+            #install-btn-2 {
+              font-family: 'Roboto';
+              background-color: rgb(0, 119, 255);
+              color: white;
+              padding: 10px;
+              border: none;
+              border-radius: 21px;
+              width: 102px;
+              height: 35px;
+              box-sizing: border-box;
+              text-align: center;
+            }
+
+            #hidden-link {
+              display: none;
+            }
+
+            #New-btn {
+              font-family: 'Roboto';
+              background-color: #bfffc6;
+              color: white;
+              padding: 10px;
+              border: none;
+              border-radius: 21px;
+              width: 102px;
+              height: 35px;
+              box-sizing: border-box;
+              text-align: center;
+            }
+
+            #hiddenLink-2 {
+              display: none;
+            }
+
            </style>
            </head>
            <body>
             <header>
                <h1>WantSpot</h1>
+               <button id="NewButton" style="font-family: 'Roboto', sans-serif; font-size: 16px; color: rgb(66, 66, 66); padding: 10px; background-color: #bfffc6; outline-color: rgb(66, 66, 66); cursor: pointer; border: none; border-radius: 21px;">New Software</button>
             <input type="text" class="search-bar" placeholder="Search for software"
           </header>
-
            </body>
 <div id="CLI-1" style="font-family: Arial, Helvetica, sans-serif">
     <p><b>Spotware</b></p>
     <p>Application for creating software in WantSpot.</p>
     <button id="installButton" style="font-family: 'Roboto', sans-serif; font-size: 16px; color: white; padding: 10px; background-color: rgb(0, 119, 255); cursor: pointer; border: none; border-radius: 21px;">Install</button>
+    <a id="downloadLink" href="#" download="your_file.txt">
+      </div>
+  <div>
+    <div id="CLI-2" style="font-family: Arial, Helvetica, sans-serif">
+      <p><b>Blender</b></p>
+      <p><b>The freedom to create</b></p>
+      <p>Compatible with: macOS 14 or later, Windows: 11</p>
+      <button id="installButton2" style="font-family: 'Roboto', sans-serif; font-size: 16px; color: white; padding: 10px; background-color: rgb(0, 119, 255); cursor: pointer; border: none; border-radius: 21px;">Install</button>
+      <a id="downloadLink2" href="#" download="blender-4.0.2-macos-x64.dmg"
     </div>
 </div>
+<script>
+  const installButton = document.getElementById('installButton');
+const downloadLink = document.getElementById('downloadLink');
+const installButton2 = document.getElementById('installButton2');
+const downloadLink2 = document.getElementById('installButton2');
+
+installButton.addEventListener('click', () => {
+    // Set the download link's href attribute to the actual file path
+    downloadLink.href = 'Downloads'; // Replace with your file path
+
+    // Simulate a click on the link to initiate the download
+    downloadLink.click();
+});
+
+installButton2.addEventListener('click', () => {
+  downloadLink2.href = 'Downloads/blender-4.0.2-macos-x64.dmg';
+
+  downloadLink2.click();
+});
+
+</script>
 </html>
